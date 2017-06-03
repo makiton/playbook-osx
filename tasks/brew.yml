@@ -19,14 +19,12 @@
     - { name: 'ctags' }
     - { name: 'git' }
     - { name: 'tmux' }
-    - { name: 'brew-cask' }
     - { name: 'coreutils' }
     - { name: 'gibo' }
     - { name: 'rbenv' }
     - { name: 'ruby-build' }
     - { name: 'pyenv-virtualenv' }
     - { name: 'go' }
-    - { name: 'ghq' }
     - { name: 'peco' }
     - { name: 'tree' }
     - { name: 'ricty', options: 'powerline', 'vim-powerline' }
@@ -37,6 +35,7 @@
 - name: Install homebrew cask packages
   homebrew_cask: name={{ item }}
   with_items:
+    - aquaskk
     - vagrant
     - virtualbox
     - google-chrome
@@ -44,10 +43,9 @@
     - google-drive
     - skype
     - appcleaner
-    - flash-player
     - xquartz
     - toggldesktop
-    - karabiner
+    - karabiner-elements
     - gyazo
     - flux
     - android-studio
