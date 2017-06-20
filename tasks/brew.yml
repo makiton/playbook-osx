@@ -31,6 +31,7 @@
     - { name: 'direnv' }
     - { name: 'reattach-to-user-namespace' }
     - { name: 'hub' }
+    - { name: 'docker-compose' }
 
 - name: Install homebrew cask packages
   homebrew_cask: name={{ item }}
