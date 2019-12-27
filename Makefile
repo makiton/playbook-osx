@@ -10,7 +10,7 @@ install: install-dein run-ansible
 
 install-dein:
 	curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > /tmp/dein-installer.sh
-	sh /tmp/dein-installer.sh ~/.vim/
+	sh /tmp/dein-installer.sh ~/.cache/dein/
 
 run-ansible:
 	ansible-playbook -K localhost.yml
