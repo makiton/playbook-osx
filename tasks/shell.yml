@@ -6,6 +6,6 @@
 - name: Add zsh to shell list
   become: yes
   shell: echo "/usr/local/bin/zsh" >> /etc/shells
-  when: zsh_defined|changed
+  when: zsh_defined.changed
 - name: Change default shell
   command: chpass -s /usr/local/bin/zsh
