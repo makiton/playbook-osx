@@ -45,3 +45,21 @@
     - slack
     - zoomus
 
+- name: Install autoupdate brew
+  homebrew_tap:
+    name: domt4/autoupdate
+
+- name: Create a directory for launchd
+  file:
+    path: ~/Library/LaunchAgents
+    state: directory
+
+- name: Check autoupdate brew
+  command: brew autoupdate --status
+  register: autoupdate_status
+  changed_when: "'running' not in autoupdate_status.stdout"
+
+- name: Enable autoupdate brew
+  command: brew autoupdate --start --upgrade --cleanup
+  when: autoupdate_status.changed
+
