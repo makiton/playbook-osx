@@ -9,7 +9,7 @@
     - { name: 'automake' }
     - { name: 'pkg-config' }
     - { name: 'zsh' }
-    - { name: 'vim' }
+    - { name: 'macvim' }
     - { name: 'ctags' }
     - { name: 'git' }
     - { name: 'tmux' }
