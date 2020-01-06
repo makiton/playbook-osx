@@ -25,6 +25,7 @@
     - { name: 'reattach-to-user-namespace' }
     - { name: 'hub' }
     - { name: 'docker-compose' }
+    - { name: 'mysql' }
 
 - homebrew_tap:
     name: homebrew/cask-versions
